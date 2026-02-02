@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+body[data-theme="light"] {
+    background-color: #e3e3e3; /* Light theme background */
+    color: #3f3f3f; /* Light theme text */
+}
+
+body[data-theme="dark"] {
+    background-color: #2b2b2b; /* Dark theme background */
+    color: #e9e9e9; /* Dark theme text */
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px; /* Icon size */
+    color: inherit; /* Use current color based on theme */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+#theme-toggle:hover {
+    opacity: 0.7; /* Slight fade on hover */
+}
+
+body {
+  font-family: "New Rocker", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  width: 100%; /* Full width for centering */
+  padding: 10px; /* Optional padding */
+}
+
+.heading {
+  flex: 1; /* Take the remaining space to center */
+  text-align: flex-start; /* Center the text of the heading */
+}
+
+.button {
+  flex: 0 0 auto; /* Don’t let the button stretch */
+  margin-right: 20px; /* Space between button and heading */
+}
+
+#output {
+  display: flex;
+  justify-content: center;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+}
