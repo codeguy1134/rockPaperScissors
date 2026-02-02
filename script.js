@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Function to update the icon and its color
   const updateIcon = (theme) => {
     themeIcon.className = theme === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
-    themeIcon.style.color = theme === 'dark' ? '#fff' : '#000'; // Adjust icon colors
+    themeIcon.style.color = theme === 'dark' ? '#fff' : '#000';
   };
 
   // Get the preferred color scheme from the OS
@@ -13,14 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set initial theme based on system preference
   let currentTheme = prefersDarkScheme.matches ? 'dark' : 'light';
   document.body.setAttribute('data-theme', currentTheme);
-  updateIcon(currentTheme); // Call this function after its declaration
-
+  updateIcon(currentTheme);
+  
   // Function to toggle theme
   const toggleTheme = () => {
     currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
     document.body.setAttribute('data-theme', currentTheme);
     console.log("Current theme:", currentTheme); // Log current theme
-    updateIcon(currentTheme); // Call this function after its declaration
+    updateIcon(currentTheme);
   };
 
   // Event listener for button click
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const newTheme = e.matches ? 'dark' : 'light';
     currentTheme = newTheme;
     document.body.setAttribute('data-theme', newTheme);
-    updateIcon(newTheme); // Call this function after its declaration
+    updateIcon(newTheme);
   });
 });
 
