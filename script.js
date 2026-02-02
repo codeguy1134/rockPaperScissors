@@ -54,10 +54,10 @@ const getComputerChoice = (min = 0, max = 2) => {
       return 'paper';
     case 2:
       return 'scissors';
-    // default:
-    //   throw new Error('Something broke! Unexpected random value.');
   }
 };
+
+// Takes returns from getHumanChoice and getComputerChoice, compares, and determines winner.
 
 function playRound(humanChoice, computerChoice) {
   if (
@@ -65,7 +65,7 @@ function playRound(humanChoice, computerChoice) {
     (humanChoice === "paper" && computerChoice === "rock") ||
     (humanChoice === "scissors" && computerChoice === "paper")
   ) {
-    return "You win!"; //no need to do anything special here since the game runs until one side has 3 wins - ties are moot
+    return "You win!"; 
   } else if (
     (humanChoice === "rock" && computerChoice === "rock") ||
     (humanChoice === "scissors" && computerChoice === "scissors") ||
@@ -76,6 +76,8 @@ function playRound(humanChoice, computerChoice) {
     return "You lose!";
   }
 }
+
+// Tracks wins, and runs function playRound until the computer or player reach 3 wins.
 
 function game() {
   while (humanScore < 3 && computerScore < 3) {
@@ -100,8 +102,10 @@ function game() {
 
   if (humanScore === 3) {
     console.log("Gratz! You won!");
-  } else {
-    console.log("Oh no! You lost!");
+  }
+
+  if (computerScore === 3) {
+    console.log("Oh no! You got beat by a computer!");
   }
 }
 
